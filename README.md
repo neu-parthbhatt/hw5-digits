@@ -1,43 +1,6 @@
 # HW5-digits
 
-Learning goals:
-
-* Practice with scikit-learn API using the digits dataset
-* Comparison of various classification methods
-* Hyperparameter tuning and model selection
-
-## Instructions
-
-The assignment has 5 questions worth 2 points each.
-Submit your solution in this README.md, including any relevant printed output and plots.
-Include a series of independent Python modules that can be run
-using the Makefile to reproduce the results that you report in this README.md.
-The code in your modules should be concise and nicely documented.
-
-For example...
-
-We'll be building on
-[05.02 - Introducing Scikit-Learn](https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/05.02-Introducing-Scikit-Learn.ipynb) by VanderPlas, which produces train/test accuracy of 0.86/0.83 for Gaussian Naive Bayes
-classification of the digits dataset.
-You can reproduce those results with
-```
-make template
-```
-which prints the train/test accuracy:
-```
-Train accuracy: 0.86
-Test accuracy: 0.83
-```
-and plots the confusion matrix:
-
-<img src="figs/template.png" width="500px">
-
-## Question 1
-
-Use the [classification_report](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html) to investigate performance by class. 
-In particular, note the variation in the "support" column.
-Propose a solution if you think the support may be problematic.
-Implement your proposed solution and comment on the results.
+1. The support is problematic since we are facing class imbalance. A way to solve this is to have stratified split between the classes, for a better accuracy. Please find below the confusion matrix from stratified split of data.
 
 ## Question 2
 
